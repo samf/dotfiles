@@ -23,6 +23,7 @@ Plugin 'tpope/vim-sleuth'         " heuristically set shiftwidth and tabexpand
 Plugin 'liuchengxu/vim-which-key' " a realtime helper for the leader key
 Plugin 'w0rp/ale'                 " asynchronous lint engine
 Plugin 'vim-airline/vim-airline'  " status line fun
+Plugin 'mattn/emmet-vim'          " html tag helpers
 
 call vundle#end()
 filetype plugin indent on
@@ -37,18 +38,19 @@ nnoremap <silent> <CR> :nohl<CR><CR>
 nnoremap <silent> <leader> :WhichKey ','<CR>
 
 imap <C-C> <Esc>
+imap <C-Y> <Esc><C-Y>,i
 
-map <leader>gi :GoImports<ENTER>
-map <leader>gf :GoFmt<ENTER>
-map <leader>gb :GoBuild<ENTER>
-map <leader>gt :GoTest<ENTER>
-map <leader>gc :GoCallees<ENTER>
-map <leader>gI :GoImplements<ENTER>
-map <leader>ge :GoIfErr<ENTER>
-map <leader>nt :NERDTreeToggle<ENTER>
-map <leader>nr :set invrelativenumber<ENTER>
 map <leader>df :%w !diff % -<ENTER>
+map <leader>gI :GoImplements<ENTER>
+map <leader>gb :GoBuild<ENTER>
+map <leader>gc :GoCallees<ENTER>
+map <leader>ge :GoIfErr<ENTER>
+map <leader>gf :GoFmt<ENTER>
+map <leader>gi :GoImports<ENTER>
+map <leader>gt :GoTest<ENTER>
 map <leader>nh :nohl<ENTER>
+map <leader>nr :set invrelativenumber<ENTER>
+map <leader>nt :NERDTreeToggle<ENTER>
 
 syntax on
 color blackboard
