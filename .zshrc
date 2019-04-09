@@ -113,8 +113,8 @@ alias ll='ls -lisa'
 
 if (( $+commands[exa] )); then
     alias lf='exa -F'
-    alias lfa='exa -Fa'
-    alias ll='exa -Sailh --git'
+    alias lfa='exa -Fa --all'
+    alias ll='exa -Sailh@ --git --all'
 fi
 
 alias l=less
