@@ -9,7 +9,6 @@ Plugin 'fatih/vim-go'             " super golang support
 Plugin 'jade.vim'                 " pug (nee jade) html dialact
 Plugin 'posva/vim-vue'            " vue single-file components
 Plugin 'tpope/vim-fugitive'       " git stuff
-Plugin 'tpope/vim-db'             " database stuff
 Plugin 'vim-stylus'               " stylus (css dialact)
 Plugin 'pangloss/vim-javascript'  " modern javascript
 Plugin 'mxw/vim-jsx'              " html embedded in javascript
