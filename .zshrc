@@ -141,7 +141,7 @@ alias -s {yml,yaml}=vim
 alias -s proto=vim
 
 alias -g L='2>&1 | less -R'
-alias -g G='| grep'
+alias -g G='2>&1 | grep'
 alias -g X='| xargs'
 alias -g W='| wc'
 alias -g H='| head'
