@@ -159,7 +159,6 @@ alias csc-build="cscope -bRq"
 # handy variables
 
 phx=ssh.phx.nearlyfreespeech.net
-buildy=9.41.34.119
 test -d $HOME/.templates && templates=$HOME/.templates
 
 # functions
