@@ -23,8 +23,10 @@ Plugin 'liuchengxu/vim-which-key' " a realtime helper for the leader key
 Plugin 'w0rp/ale'                 " asynchronous lint engine
 Plugin 'vim-airline/vim-airline'  " status line fun
 Plugin 'mattn/emmet-vim'          " html tag helpers
+Plugin 'pseewald/vim-anyfold'     " helpers for folding
 
 call vundle#end()
+
 filetype plugin indent on
 
 let mapleader = ","
@@ -40,6 +42,7 @@ imap <C-C> <Esc>
 imap <C-Y> <Esc><C-Y>,i
 
 map <leader>df :%w !diff % -<ENTER>
+map <leader>zv :normal mzzMzv`z<CR>
 map <leader>gI :GoImplements<ENTER>
 map <leader>gb :GoBuild<ENTER>
 map <leader>gc :GoCallees<ENTER>
@@ -70,3 +73,5 @@ autocmd FileType make setlocal noexpandtab
 autocmd FileType cpp setlocal noexpandtab
 autocmd FileType go setlocal noexpandtab
 autocmd FileType vue syntax sync fromstart
+autocmd FileType * AnyFoldActivate
+set foldlevel=99
