@@ -1,0 +1,15 @@
+#! /usr/bin/zsh
+
+# x - exec or exit
+# "x foo" becomes "exec foo"
+# "x" becomes "exit"
+
+local notfound
+
+# if no args, we exit
+[[ -z "$*" ]] && exit
+
+# if an arg was given, we exec it only if it's executable
+notfound=$(type $1)
+[[ "$?" = "0" ]] && exec $*
+echo $notfound

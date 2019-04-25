@@ -1,0 +1,39 @@
+#! /usr/bin/zsh
+
+# t - fancy TMOUT getter/setter
+# you can say "t 7200" or "t 2h" for the same effect
+# with no args, just give the value of TMOUT
+
+if [[ -z "$*" ]]; then
+	echo ${TMOUT:-unlimited}
+        return
+fi
+
+if [[ $1 = "n" ]]; then
+    unset TMOUT
+    return
+fi
+
+typeset -i seconds working
+typeset -A timeval
+typeset i
+
+seconds=0
+working=0
+timeval=(w 604800 d 86400 h 3600 m 60 s 1)
+
+for i in ${(s..)1}
+do
+    case $i in
+    ([0-9]) working=$(($working * 10 + $i))
+    ;;
+    (w|d|h|m|s)
+    [[ $working = 0 ]] && working=1
+    seconds=$(($working * $timeval[$i] + $seconds))
+    working=0
+    ;;
+    esac
+done
+
+TMOUT=$(($seconds + $working))
+typeset +x TMOUT
