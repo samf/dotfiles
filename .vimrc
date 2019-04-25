@@ -50,6 +50,7 @@ map <leader>ge :GoIfErr<ENTER>
 map <leader>gf :GoFmt<ENTER>
 map <leader>gi :GoImports<ENTER>
 map <leader>gt :GoTest<ENTER>
+map <leader>hs :set nowrap sidescroll=1<ENTER>
 map <leader>nh :nohl<ENTER>
 map <leader>nr :set invrelativenumber<ENTER>
 map <leader>nt :NERDTreeToggle<ENTER>
