@@ -5,7 +5,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'     " vundle its own self
 
 Plugin 'Markdown'                 " markdown support
-Plugin 'fatih/vim-go'             " super golang support
+Plugin 'fatih/vim-go'             " super golang support (:GoInst... :GoUp...)
 Plugin 'jade.vim'                 " pug (nee jade) html dialact
 Plugin 'posva/vim-vue'            " vue single-file components
 Plugin 'tpope/vim-fugitive'       " git stuff
@@ -24,7 +24,7 @@ Plugin 'w0rp/ale'                 " asynchronous lint engine
 Plugin 'vim-airline/vim-airline'  " status line fun
 Plugin 'mattn/emmet-vim'          " html tag helpers
 Plugin 'pseewald/vim-anyfold'     " helpers for folding
-Plugin 'ambv/black'               " python formatting
+Plugin 'ambv/black'               " python formatting (:BlackUpgrade)
 
 call vundle#end()
 
