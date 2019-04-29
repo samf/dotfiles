@@ -24,6 +24,7 @@ Plugin 'w0rp/ale'                 " asynchronous lint engine
 Plugin 'vim-airline/vim-airline'  " status line fun
 Plugin 'mattn/emmet-vim'          " html tag helpers
 Plugin 'pseewald/vim-anyfold'     " helpers for folding
+Plugin 'ambv/black'               " python formatting
 
 call vundle#end()
 
@@ -31,6 +32,7 @@ filetype plugin indent on
 
 let mapleader = ","
 
+let g:black_linelength = 80
 let g:go_fmt_cmd = "goimports"
 let g:go_fmt_fail_silently = 1
 
@@ -54,6 +56,7 @@ map <leader>hs :set nowrap sidescroll=1<ENTER>
 map <leader>nh :nohl<ENTER>
 map <leader>nr :set invrelativenumber<ENTER>
 map <leader>nt :NERDTreeToggle<ENTER>
+map <leader>pb :Black<ENTER>
 
 syntax on
 color blackboard
