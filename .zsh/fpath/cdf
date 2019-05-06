@@ -1,0 +1,10 @@
+#! /usr/bin/zsh
+
+# cdf is "cd force", i.e. make the directory and cd to it
+
+test -z "$1" && {
+    echo cdf is cd force
+    return
+}
+
+mkdir -p $1 && cd $1
