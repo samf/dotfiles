@@ -178,8 +178,8 @@ autoload -U zmv
 
 # completion control
 
-autoload -U compinit && compinit
-compinit -d /tmp/.samf.zcompdump
+autoload -U compinit && compinit -u
+compinit -u -d /tmp/.${USER}.zcompdump
 
 if (( $+commands[kubectl] )); then
     . <(kubectl completion zsh)
