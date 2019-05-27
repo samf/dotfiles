@@ -58,6 +58,17 @@ map <leader>nr :set invrelativenumber<ENTER>
 map <leader>nt :NERDTreeToggle<ENTER>
 map <leader>pb :Black<ENTER>
 
+map <leader>gdr :GoDebugStart
+map <leader>gdS :GoDebugStop<ENTER>
+map <leader>gdr :GoDebugRestart<ENTER>
+map <leader>gdt :GoDebugTest<ENTER>
+map <leader>gdb :GoDebugBreakpoint<ENTER>
+map <leader>gds :GoDebugStep<ENTER>
+map <leader>gdn :GoDebugNext<ENTER>
+map <leader>gdo :GoDebugStepOut<ENTER>
+map <leader>gdc :GoDebugContinue<ENTER>
+map <leader>gdp :GoDebugPrint
+
 syntax on
 color blackboard
 set background=dark
