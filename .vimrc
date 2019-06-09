@@ -2,29 +2,30 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'     " vundle its own self
+Plugin 'VundleVim/Vundle.vim'           " vundle its own self
 
-Plugin 'Markdown'                 " markdown support
-Plugin 'fatih/vim-go'             " super golang support (:GoInst... :GoUp...)
-Plugin 'jade.vim'                 " pug (nee jade) html dialact
-Plugin 'posva/vim-vue'            " vue single-file components
-Plugin 'tpope/vim-fugitive'       " git stuff
-Plugin 'vim-stylus'               " stylus (css dialact)
-Plugin 'pangloss/vim-javascript'  " modern javascript
-Plugin 'mxw/vim-jsx'              " html embedded in javascript
-Plugin 'scrooloose/nerdcommenter' " comment/uncomment stuff
-Plugin 'nelstrom/vim-blackboard'  " color scheme
-Plugin 'stephpy/vim-yaml'         " yaml support (limited)
-Plugin 'RRethy/vim-illuminate'    " highlight the word you're sitting on
-Plugin 'scrooloose/nerdtree'      " directory tree browser
-Plugin 'mhinz/vim-signify'        " highlight your changes from source control
-Plugin 'tpope/vim-sleuth'         " heuristically set shiftwidth and tabexpand
-Plugin 'liuchengxu/vim-which-key' " a realtime helper for the leader key
-Plugin 'w0rp/ale'                 " asynchronous lint engine
-Plugin 'vim-airline/vim-airline'  " status line fun
-Plugin 'mattn/emmet-vim'          " html tag helpers
-Plugin 'pseewald/vim-anyfold'     " helpers for folding
-Plugin 'ambv/black'               " python formatting (:BlackUpgrade)
+Plugin 'Markdown'                       " markdown support
+Plugin 'fatih/vim-go'                   " golang support (:GoInst... :GoUp...)
+Plugin 'jade.vim'                       " pug (nee jade) html dialact
+Plugin 'posva/vim-vue'                  " vue single-file components
+Plugin 'tpope/vim-fugitive'             " git stuff
+Plugin 'vim-stylus'                     " stylus (css dialact)
+Plugin 'pangloss/vim-javascript'        " modern javascript
+Plugin 'mxw/vim-jsx'                    " html embedded in javascript
+Plugin 'scrooloose/nerdcommenter'       " comment/uncomment stuff
+Plugin 'nelstrom/vim-blackboard'        " color scheme
+Plugin 'stephpy/vim-yaml'               " yaml support (limited)
+Plugin 'RRethy/vim-illuminate'          " highlight the word you're sitting on
+Plugin 'scrooloose/nerdtree'            " directory tree browser
+Plugin 'mhinz/vim-signify'              " highlight changes from source control
+Plugin 'tpope/vim-sleuth'               " heuristic shiftwidth and tabexpand
+Plugin 'liuchengxu/vim-which-key'       " a realtime helper for the leader key
+Plugin 'w0rp/ale'                       " asynchronous lint engine
+Plugin 'vim-airline/vim-airline'        " status line fun
+Plugin 'vim-airline/vim-airline-themes' " themes for vim-airline
+Plugin 'mattn/emmet-vim'                " html tag helpers
+Plugin 'pseewald/vim-anyfold'           " helpers for folding
+Plugin 'ambv/black'                     " python formatting (:BlackUpgrade)
 
 call vundle#end()
 
@@ -32,6 +33,7 @@ filetype plugin indent on
 
 let mapleader = ","
 
+let g:airline_theme='deus'
 let g:black_linelength = 80
 let g:go_fmt_cmd = "goimports"
 let g:go_fmt_fail_silently = 1
