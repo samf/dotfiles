@@ -1,0 +1,23 @@
+#! /usr/bin/zsh
+
+local -a candidates
+local i=1
+
+# read a choice as arg 1
+[[ -n "$1" ]] && i="$1"
+
+if [[ $i -eq 0 ]]; then
+    eval $(ssh-agent)
+    ssh-add ~/.ssh/id_?sa ~/.ssh/id_ed25519
+else
+    # get a list of candidates
+    candidates=( /tmp/ssh-**/*(=U) )
+
+    # display the choice vs how many choices
+    echo "${i}/${#candidates}"
+
+    SSH_AUTH_SOCK=$candidates[$i]
+fi
+
+# show whether it's working
+ssh-add -l
