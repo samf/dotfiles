@@ -33,7 +33,7 @@ filetype plugin indent on
 
 let mapleader = ","
 
-let g:airline_theme='deus'
+let g:airline_theme = "deus"
 let g:black_linelength = 80
 let g:go_fmt_cmd = "goimports"
 let g:go_fmt_fail_silently = 1
