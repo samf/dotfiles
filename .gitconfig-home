@@ -1,0 +1,20 @@
+[user]
+	name = Sam Falkner
+	email = sam.falkner@gmail.com
+[core]
+	pager = less -FR
+[color]
+	ui = auto
+[push]
+	default = simple
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[status]
+	submoduleSummary = true
+[alias]
+	dag = !git log --graph --decorate $(git rev-list -g --all)
+	subs = !git submodule sync --recursive && git submodule update --init --recursive || echo \"FAILED\"
+	minisub = !git submodule sync && git submodule update --init || echo \"FAILED\"
