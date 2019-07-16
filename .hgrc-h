@@ -1,0 +1,60 @@
+[ui]
+username = Sam Falkner <sam.falkner@gmail.com>
+merge = internal:merge
+
+[extensions]
+graphlog =
+mq =
+rebase =
+progress =
+color =
+pager =
+shelve =
+
+[diff]
+git = True
+nodates = True
+
+[templates]
+dag = '{label("changeset.{phase}", rev)}:{label("changeset.{phase}", node|short)} {label("log.branch", branch)} {label("log.author", author|emailuser)}: {label("log.description", desc|firstline)}\n'
+
+[color]
+mode = ansi
+color.lightyellow = 191
+color.dark = 245
+log.branch = red bold
+log.tag = blue
+# log.author = lightyellow
+changeset.public = yellow
+changeset.draft = green
+changeset.secret = magenta bold
+desc.bugid = cyan
+desc.arc = cyan
+
+[merge-tools]
+vimdiff.executable = vim
+vimdiff.args = -f -d $output -M $local $base $other -c "wincmd J" -c "set modifiable" -c "set write"
+vimdiff.premerge = keep
+
+filemerge.executable = /Users/samf/src/apple_filemerge.sh
+filemerge.args = $local $other -ancestor $base -merge $output
+
+[alias]
+dag = glog --template dag
+qvs = qseries -vs
+qdraft = phase -d qbase:qtip
+qsecret = phase -s -f qbase:qtip
+
+[mq]
+secret = True
+
+[hostsecurity]
+bitbucket.org:fingerprints=sha256:4e:65:3e:76:0f:81:59:85:5b:50:06:0c:c2:4d:3c:56:53:8b:83:3e:9b:fa:55:26:98:9a:ca:e2:25:03:92:47
+
+[pager]
+pager = less -FR
+attend = log, diff, qdiff, dag, glog, help, annotate,
+
+[hooks]
+prechangegroup.mq-no-pull = ! hg qtop > /dev/null 2>&1
+preoutgoing.mq-no-push = ! hg qtop > /dev/null 2>&1
