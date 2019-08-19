@@ -231,10 +231,6 @@ if [[ -w .ssh ]]; then
     unset current needed
 fi
 
-# iterm2 integration
-
-. $HOME/.iterm2_shell_integration.zsh
-
 # local customizations
 
 custom=(
