@@ -26,6 +26,7 @@ Plugin 'vim-airline/vim-airline-themes' " themes for vim-airline
 Plugin 'mattn/emmet-vim'                " html tag helpers
 Plugin 'pseewald/vim-anyfold'           " helpers for folding
 Plugin 'ambv/black'                     " python formatting (:BlackUpgrade)
+Plugin 'samf/vitality.vim'              " FocusLost for non-gui vim
 
 call vundle#end()
 
@@ -91,4 +92,5 @@ autocmd FileType cpp setlocal noexpandtab
 autocmd FileType go setlocal noexpandtab
 autocmd FileType vue syntax sync fromstart
 autocmd FileType * AnyFoldActivate
+autocmd FocusLost * silent! :wa
 set foldlevel=99
