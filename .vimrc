@@ -25,8 +25,8 @@ Plugin 'vim-airline/vim-airline'        " status line fun
 Plugin 'vim-airline/vim-airline-themes' " themes for vim-airline
 Plugin 'mattn/emmet-vim'                " html tag helpers
 Plugin 'pseewald/vim-anyfold'           " helpers for folding
-Plugin 'ambv/black'                     " python formatting (:BlackUpgrade)
 Plugin 'samf/vitality.vim'              " FocusLost for non-gui vim
+Plugin 'psf/black'                      " python formatter (:BlackUpgrade)
 
 call vundle#end()
 
