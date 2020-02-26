@@ -19,3 +19,4 @@
 	subs = !git submodule sync --recursive && git submodule update --init --recursive || echo \"FAILED\"
 	minisub = !git submodule sync && git submodule update --init || echo \"FAILED\"
 	conflicts = !git ls-files -u | cut -f 2 | sort -u
+	root = !pwd
