@@ -24,12 +24,8 @@ setopt all_export
 
 HISTSIZE=16384
 PAGER=less
-P4CONFIG=.p4rc
-Muser=samf
 LESS=is
 EDITOR=vi
-whirly=/net/whirlpool.us.oracle.com/tank/ws/samf
-ONBLD_BUGDB_URL=http://tharunka.us.oracle.com:24601
 
 tzwant=/usr/share/zoneinfo/US/Mountain
 [[ -r $tzwant ]] && TZ=$tzwant
@@ -111,12 +107,6 @@ alias lfa='lf -a'
 alias lfs='lfa -s'
 alias ll='ls -lisa'
 
-if (( $+commands[exa] )); then
-    alias lf='exa -F'
-    alias lfa='exa -Fa --all'
-    alias ll='exa -Sailh@ --git --all'
-fi
-
 alias l=less
 alias j=jobs
 alias k=kill
@@ -142,6 +132,7 @@ alias -s proto=vim
 
 alias -g L='2>&1 | less -R'
 alias -g G='2>&1 | grep'
+alias -g J='| jq'
 alias -g X='| xargs'
 alias -g W='| wc'
 alias -g H='| head'
