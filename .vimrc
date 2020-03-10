@@ -27,6 +27,7 @@ Plugin 'mattn/emmet-vim'                " html tag helpers
 Plugin 'pseewald/vim-anyfold'           " helpers for folding
 Plugin 'samf/vitality.vim'              " FocusLost for non-gui vim
 Plugin 'psf/black'                      " python formatter (:BlackUpgrade)
+Plugin 'jaxbot/semantic-highlight.vim'  " even fancier syntax highlighting
 
 call vundle#end()
 
@@ -60,6 +61,7 @@ map <leader>nh :nohl<ENTER>
 map <leader>nr :set invrelativenumber<ENTER>
 map <leader>nt :NERDTreeToggle<ENTER>
 map <leader>pb :Black<ENTER>
+map <leader>sh :SemanticHighlightToggle<ENTER>
 
 map <leader>gdr :GoDebugStart
 map <leader>gdS :GoDebugStop<ENTER>
