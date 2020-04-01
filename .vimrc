@@ -28,6 +28,7 @@ Plugin 'pseewald/vim-anyfold'           " helpers for folding
 Plugin 'samf/vitality.vim'              " FocusLost for non-gui vim
 Plugin 'psf/black'                      " python formatter (:BlackUpgrade)
 Plugin 'jaxbot/semantic-highlight.vim'  " even fancier syntax highlighting
+Plugin 'prettier/vim-prettier'          " run prettier within vim
 
 call vundle#end()
 
@@ -94,5 +95,5 @@ autocmd FileType cpp setlocal noexpandtab
 autocmd FileType go setlocal noexpandtab
 autocmd FileType vue syntax sync fromstart
 autocmd FileType * AnyFoldActivate
-autocmd FocusLost * silent! :wa
+"autocmd FocusLost * silent! :wa
 set foldlevel=99
