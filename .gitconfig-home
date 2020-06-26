@@ -3,6 +3,8 @@
 	email = sam.falkner@gmail.com
 [core]
 	pager = less -FR
+	eol = lf
+	autocrlf = input
 [color]
 	ui = auto
 [push]
