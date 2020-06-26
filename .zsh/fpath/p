@@ -1,6 +1,9 @@
 #! /usr/bin/zsh
 
-local pro="$1"
+local pro
 
-[[ -z "$pro" ]] && pro=$(uname -n | sed 's/\..*//')
+pro=$(uname -n | sed 's/\..*//')
+[[ -n "$wsname" ]] && pro="$wsname"
+(( $# > 0 )) && pro=$1
+
 PROMPT="%B$pro/%!/%(#.#.*)%b "

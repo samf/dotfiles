@@ -13,7 +13,6 @@ REPORTTIME=1
 
 # zsh variables
 
-wsname=${WS:t}
 PROMPT="%B${wsname:-%m}/%!/%(#.#.*)%b "
 RPROMPT="%B%~ %T%b"
 TMOUT=120
