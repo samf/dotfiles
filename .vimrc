@@ -26,7 +26,7 @@ Plugin 'vim-airline/vim-airline-themes' " themes for vim-airline
 Plugin 'mattn/emmet-vim'                " html tag helpers
 Plugin 'pseewald/vim-anyfold'           " helpers for folding
 Plugin 'samf/vitality.vim'              " FocusLost for non-gui vim
-Plugin 'psf/black'                      " python formatter (:BlackUpgrade)
+"Plugin 'psf/black'                      " python formatter (:BlackUpgrade)
 Plugin 'jaxbot/semantic-highlight.vim'  " even fancier syntax highlighting
 Plugin 'prettier/vim-prettier'          " run prettier within vim
 
