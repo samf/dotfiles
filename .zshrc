@@ -43,6 +43,7 @@ prepath=(
     /opt/SUNWspro/ParallelMake/bin
     /opt/SUNWspro/bin
     $HOME/.cargo/bin
+    /usr/local/opt/python@3.8/bin
 )
 postpath=(
     /usr/misc/bin
@@ -119,7 +120,6 @@ alias tf='tail -f'
 alias ta='type -a'
 alias ma=xmodmap
 alias dfh='df -h'
-alias pyc='python -m py_compile'
 
 if (( ! $+commands[reset] )); then
     alias reset='echo -e "\033c"'
