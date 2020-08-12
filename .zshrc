@@ -121,6 +121,10 @@ alias ta='type -a'
 alias ma=xmodmap
 alias dfh='df -h'
 
+alias crd='npx cypress open --env baseUrl=https://efmrl.net:8443/efmrl-api/,sBaseUrl=https://s.efmrl.net:8443/efmrl-api/,testBaseUrl=https://test.efmrl.net:8443/efmrl-api/,devBaseUrl=https://efmrl.net:8443/efmrl-api/sb/dev/'
+alias crp='npx cypress open --env baseUrl=https://efmrl.com/efmrl-api/,sBaseUrl=https://s.efmrl.com/efmrl-api/,testBaseUrl=https://test.efmrl.com/efmrl-api/,devBaseUrl=https://efmrl.com/efmrl-api/sb/dev/'
+
+
 if (( ! $+commands[reset] )); then
     alias reset='echo -e "\033c"'
 fi
