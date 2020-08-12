@@ -9,6 +9,8 @@
 	ui = auto
 [push]
 	default = simple
+[pull]
+    ff = only
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
