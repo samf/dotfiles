@@ -30,6 +30,7 @@ Plugin 'psf/black'                      " python formatter (:BlackUpgrade)
 Plugin 'jaxbot/semantic-highlight.vim'  " even fancier syntax highlighting
 Plugin 'prettier/vim-prettier'          " run prettier within vim
 Plugin 'machakann/vim-sandwich'         " saw(, sr({, sdb ('b' is auto)
+Plugin 'leafOfTree/vim-svelte-plugin'   " svelte
 
 call vundle#end()
 
