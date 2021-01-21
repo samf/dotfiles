@@ -17,7 +17,6 @@ Plugin 'nelstrom/vim-blackboard'        " color scheme
 Plugin 'stephpy/vim-yaml'               " yaml support (limited)
 Plugin 'RRethy/vim-illuminate'          " highlight the word you're sitting on
 Plugin 'scrooloose/nerdtree'            " directory tree browser
-Plugin 'mhinz/vim-signify'              " highlight changes from source control
 Plugin 'tpope/vim-sleuth'               " heuristic shiftwidth and tabexpand
 Plugin 'liuchengxu/vim-which-key'       " a realtime helper for the leader key
 Plugin 'w0rp/ale'                       " asynchronous lint engine
@@ -30,7 +29,9 @@ Plugin 'psf/black'                      " python formatter (:BlackUpgrade)
 Plugin 'jaxbot/semantic-highlight.vim'  " even fancier syntax highlighting
 Plugin 'prettier/vim-prettier'          " run prettier within vim
 Plugin 'machakann/vim-sandwich'         " saw(, sr({, sdb ('b' is auto)
-Plugin 'leafOfTree/vim-svelte-plugin'   " svelte
+Plugin 'leafOfTree/vim-svelte-plugin'   " svelte syntax highlighting
+Plugin 'coc-extensions/coc-svelte'      " the rest of svelte
+Plugin 'airblade/vim-gitgutter'         " gutter shows git changes
 
 call vundle#end()
 
@@ -51,6 +52,7 @@ imap <C-C> <Esc>
 imap <C-Y> <Esc><C-Y>,i
 
 map <leader>df :%w !diff % -<ENTER>
+map <leader>dF :let g:gitgutter_diff_base = 
 map <leader>zv :normal mzzMzv`z<CR>
 map <leader>gI :GoImplements<ENTER>
 map <leader>gb :GoBuild<ENTER>

@@ -38,12 +38,8 @@ prepath=(
     $HOME/$(uname -s)-$(uname -p 2>/dev/null || uname -m)/bin
     $HOME/$(uname -s)/bin
     $HOME/src/gocode/bin
-    /opt/onbld/bin
-    /opt/onbld/bin/$(uname -p 2>/dev/null)
-    /opt/SUNWspro/ParallelMake/bin
-    /opt/SUNWspro/bin
+    /opt/homebrew/bin
     $HOME/.cargo/bin
-    /usr/local/opt/python@3.8/bin
 )
 postpath=(
     /usr/misc/bin
