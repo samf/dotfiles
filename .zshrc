@@ -23,7 +23,7 @@ setopt all_export
 
 HISTSIZE=16384
 PAGER=less
-LESS=is
+LESS=isX
 EDITOR=vi
 
 tzwant=/usr/share/zoneinfo/US/Mountain
