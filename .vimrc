@@ -32,6 +32,7 @@ Plugin 'machakann/vim-sandwich'         " saw(, sr({, sdb ('b' is auto)
 Plugin 'leafOfTree/vim-svelte-plugin'   " svelte syntax highlighting
 Plugin 'coc-extensions/coc-svelte'      " the rest of svelte
 Plugin 'airblade/vim-gitgutter'         " gutter shows git changes
+Plugin 'ruanyl/vim-gh-line'             " open current line on github
 
 call vundle#end()
 
@@ -43,6 +44,7 @@ let g:airline_theme = "deus"
 let g:black_linelength = 80
 let g:go_fmt_cmd = "goimports"
 let g:go_fmt_fail_silently = 1
+let g:gh_line_blame_map = '<leader>gB'
 
 set hidden incsearch hlsearch ignorecase smartcase
 nnoremap <silent> <CR> :nohl<CR><CR>
