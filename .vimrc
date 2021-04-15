@@ -33,6 +33,7 @@ Plugin 'leafOfTree/vim-svelte-plugin'   " svelte syntax highlighting
 Plugin 'coc-extensions/coc-svelte'      " the rest of svelte
 Plugin 'airblade/vim-gitgutter'         " gutter shows git changes
 Plugin 'ruanyl/vim-gh-line'             " open current line on github
+Plugin 'google/vim-jsonnet'             " jsonnet
 
 call vundle#end()
 
