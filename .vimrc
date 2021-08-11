@@ -28,7 +28,6 @@ Plugin 'samf/vitality.vim'              " FocusLost for non-gui vim
 Plugin 'psf/black'                      " python formatter (:BlackUpgrade)
 Plugin 'jaxbot/semantic-highlight.vim'  " even fancier syntax highlighting
 Plugin 'prettier/vim-prettier'          " run prettier within vim
-Plugin 'machakann/vim-sandwich'         " saw(, sr({, sdb ('b' is auto)
 Plugin 'leafOfTree/vim-svelte-plugin'   " svelte syntax highlighting
 Plugin 'coc-extensions/coc-svelte'      " the rest of svelte
 Plugin 'airblade/vim-gitgutter'         " gutter shows git changes
