@@ -3,9 +3,13 @@
 # func-forget - forget all functions that came from autoloads
 # set them up to be autoloaded again
 
-local f
+local -a f
+local p
 
-f=(~/.zsh/fpath/**/*(.))
+for p in $fpath
+do
+    f=( $f $p/*(.) )
+done
 
 unfunction $f:t 2>/dev/null
 
