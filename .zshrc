@@ -243,3 +243,5 @@ if [[ $ZSH_VERSION != 5.1.1 ]]; then
     . ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
     . ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
