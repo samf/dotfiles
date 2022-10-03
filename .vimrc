@@ -24,7 +24,6 @@ Plugin 'vim-airline/vim-airline'        " status line fun
 Plugin 'vim-airline/vim-airline-themes' " themes for vim-airline
 Plugin 'mattn/emmet-vim'                " html tag helpers
 Plugin 'pseewald/vim-anyfold'           " helpers for folding
-Plugin 'samf/vitality.vim'              " FocusLost for non-gui vim
 Plugin 'psf/black'                      " python formatter (:BlackUpgrade)
 Plugin 'jaxbot/semantic-highlight.vim'  " even fancier syntax highlighting
 Plugin 'prettier/vim-prettier'          " run prettier within vim
@@ -33,6 +32,7 @@ Plugin 'coc-extensions/coc-svelte'      " the rest of svelte
 Plugin 'airblade/vim-gitgutter'         " gutter shows git changes
 Plugin 'ruanyl/vim-gh-line'             " open current line on github
 Plugin 'google/vim-jsonnet'             " jsonnet
+Plugin 'kyoh86/vim-go-coverage'         " Go code coverage: GoCover GoCoverClear
 
 call vundle#end()
 
@@ -101,5 +101,4 @@ autocmd FileType cpp setlocal noexpandtab
 autocmd FileType go setlocal noexpandtab
 autocmd FileType vue syntax sync fromstart
 autocmd FileType * AnyFoldActivate
-"autocmd FocusLost * silent! :wa
 set foldlevel=99

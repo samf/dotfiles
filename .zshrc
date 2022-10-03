@@ -103,6 +103,9 @@ alias lfa='lf -a'
 alias lfs='lfa -s'
 alias ll='ls -lisa'
 
+alias mvi='mv -i'
+alias cpi='cp -i'
+
 alias l=less
 alias j=jobs
 alias k=kill
@@ -137,6 +140,7 @@ alias -g W='| wc'
 alias -g H='| head'
 alias -g T='| tail'
 alias -g P='2>&1 |'
+alias -g S='| sort'
 alias -g BG='>/dev/null 2>&1 &'
 
 if (( $+commands[cscope-fast] )); then
@@ -243,5 +247,7 @@ if [[ $ZSH_VERSION != 5.1.1 ]]; then
     . ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
     . ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+# use fzf if present
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
