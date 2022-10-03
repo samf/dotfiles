@@ -10,7 +10,7 @@
 [push]
 	default = simple
 [pull]
-    ff = only
+	ff = only
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -24,5 +24,7 @@
 	dag = !git log --graph --decorate $(git rev-list -g --all)
 	subs = !git submodule sync --recursive && git submodule update --init --recursive || echo \"FAILED\"
 	minisub = !git submodule sync && git submodule update --init || echo \"FAILED\"
+	sublist = !git submodule--helper list
 	conflicts = !git ls-files -u | cut -f 2 | sort -u
+	exec = "!exec "
 	root = !pwd
