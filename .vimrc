@@ -13,7 +13,7 @@ Plugin 'vim-stylus'                     " stylus (css dialact)
 Plugin 'pangloss/vim-javascript'        " modern javascript
 Plugin 'mxw/vim-jsx'                    " html embedded in javascript
 Plugin 'scrooloose/nerdcommenter'       " comment/uncomment stuff
-Plugin 'nelstrom/vim-blackboard'        " color scheme
+Plugin 'lisposter/vim-blackboard'       " color scheme
 Plugin 'stephpy/vim-yaml'               " yaml support (limited)
 Plugin 'RRethy/vim-illuminate'          " highlight the word you're sitting on
 Plugin 'scrooloose/nerdtree'            " directory tree browser
