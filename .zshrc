@@ -153,7 +153,7 @@ alias csc-build="cscope -bRq"
 # handy variables
 
 phx=ssh.phx.nearlyfreespeech.net
-test -d $HOME/.templates && templates=$HOME/.templates
+marshall='/Users/samf/Library/Mobile Documents/com~apple~CloudDocs/Marshall fire'
 
 # functions
 
