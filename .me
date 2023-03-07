@@ -3,4 +3,8 @@
 HOME=`pwd`
 export HOME
 
-. $HOME/.profile
+profile="$HOME/.profile"
+
+test -f $profile || profile="$HOME/profile"
+
+. $profile
