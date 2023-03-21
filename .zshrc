@@ -142,6 +142,7 @@ alias -g T='| tail'
 alias -g P='2>&1 |'
 alias -g S='| sort'
 alias -g BG='>/dev/null 2>&1 &'
+alias -g LC='| lolcat'
 
 if (( $+commands[cscope-fast] )); then
     alias csc="cscope-fast -e -p 3 -d -q"
