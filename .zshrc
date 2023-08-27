@@ -25,6 +25,7 @@ HISTSIZE=16384
 PAGER=less
 LESS=isXR
 EDITOR=vi
+BAT_THEME=Coldark-Dark
 
 tzwant=/usr/share/zoneinfo/US/Mountain
 [[ -r $tzwant ]] && TZ=$tzwant
@@ -39,6 +40,7 @@ prepath=(
     $HOME/$(uname -s)/bin
     $HOME/src/gocode/bin
     /opt/homebrew/bin
+    /opt/homebrew/sbin
     $HOME/.cargo/bin
 )
 postpath=(
@@ -130,7 +132,7 @@ fi
 
 alias -s go=vim
 alias -s {yml,yaml}=vim
-alias -s proto=vim
+alias -s taskpaper=vim
 
 alias -g L='2>&1 | less -R'
 alias -g G='2>&1 | grep'
@@ -144,17 +146,11 @@ alias -g S='| sort'
 alias -g BG='>/dev/null 2>&1 &'
 alias -g LC='| lolcat'
 
-if (( $+commands[cscope-fast] )); then
-    alias csc="cscope-fast -e -p 3 -d -q"
-else
-    alias csc="cscope -e -p 3 -d -q"
-fi
-alias csc-build="cscope -bRq"
-
 # handy variables
 
 phx=ssh.phx.nearlyfreespeech.net
 marshall='/Users/samf/Library/Mobile Documents/com~apple~CloudDocs/Marshall fire'
+json='application/json'
 
 # functions
 
@@ -252,3 +248,6 @@ fi
 # use fzf if present
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if (( $+commands[fd] )); then
+    FZF_ALT_C_COMMAND="fd --no-ignore-vcs --hidden -t d . $HOME"
+fi
