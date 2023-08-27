@@ -1,4 +1,0 @@
-#! /usr/bin/zsh
-
-mv -i $1 $2
-pbcopy <<< $2
