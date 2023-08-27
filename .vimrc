@@ -25,7 +25,6 @@ Plugin 'vim-airline/vim-airline-themes' " themes for vim-airline
 Plugin 'mattn/emmet-vim'                " html tag helpers
 Plugin 'pseewald/vim-anyfold'           " helpers for folding
 Plugin 'psf/black'                      " python formatter (:BlackUpgrade)
-Plugin 'jaxbot/semantic-highlight.vim'  " even fancier syntax highlighting
 Plugin 'prettier/vim-prettier'          " run prettier within vim
 Plugin 'leafOfTree/vim-svelte-plugin'   " svelte syntax highlighting
 Plugin 'coc-extensions/coc-svelte'      " the rest of svelte
@@ -33,6 +32,7 @@ Plugin 'airblade/vim-gitgutter'         " gutter shows git changes
 Plugin 'ruanyl/vim-gh-line'             " open current line on github
 Plugin 'google/vim-jsonnet'             " jsonnet
 Plugin 'kyoh86/vim-go-coverage'         " Go code coverage: GoCover GoCoverClear
+Plugin 'davidoc/taskpaper.vim'          " Taskpaper support
 
 call vundle#end()
 
@@ -42,8 +42,8 @@ let mapleader = ","
 
 let g:airline_theme = "deus"
 let g:black_linelength = 80
-let g:go_fmt_cmd = "goimports"
-let g:go_fmt_fail_silently = 1
+let g:ale_linters = { 'go': ['golangci-lint'] }
+let g:ale_go_golangci_lint_package = 1
 let g:gh_line_blame_map = '<leader>gB'
 
 set hidden incsearch hlsearch ignorecase smartcase
@@ -68,7 +68,6 @@ map <leader>nh :nohl<ENTER>
 map <leader>nr :set invrelativenumber<ENTER>
 map <leader>nt :NERDTreeToggle<ENTER>
 map <leader>pb :Black<ENTER>
-map <leader>sh :SemanticHighlightToggle<ENTER>
 
 map <leader>gdr :GoDebugStart
 map <leader>gdS :GoDebugStop<ENTER>
