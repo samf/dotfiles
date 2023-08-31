@@ -1,0 +1,5 @@
+#! /usr/bin/zsh
+
+vared -p 'GIT_DIR: ' -c GIT_DIR
+
+test -z $GIT_DIR || test -d $GIT_DIR || unset GIT_DIR
