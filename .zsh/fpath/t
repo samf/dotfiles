@@ -9,10 +9,12 @@ if [[ -z "$*" ]]; then
         return
 fi
 
-if [[ $1 = "n" ]]; then
+case $1 in
+    (n|u)
     unset TMOUT
     return
-fi
+    ;;
+esac
 
 typeset -i seconds working
 typeset -A timeval
