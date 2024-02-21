@@ -2,37 +2,43 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'           " vundle its own self
+Plugin 'VundleVim/Vundle.vim'               " VundleUpdate
 
-Plugin 'Markdown'                       " markdown support
-Plugin 'fatih/vim-go'                   " golang support (:GoInst... :GoUp...)
-Plugin 'jade.vim'                       " pug (nee jade) html dialact
-Plugin 'posva/vim-vue'                  " vue single-file components
-Plugin 'tpope/vim-fugitive'             " git stuff
-Plugin 'vim-stylus'                     " stylus (css dialact)
-Plugin 'pangloss/vim-javascript'        " modern javascript
-Plugin 'mxw/vim-jsx'                    " html embedded in javascript
-Plugin 'scrooloose/nerdcommenter'       " comment/uncomment stuff
-Plugin 'lisposter/vim-blackboard'       " color scheme
-Plugin 'stephpy/vim-yaml'               " yaml support (limited)
-Plugin 'RRethy/vim-illuminate'          " highlight the word you're sitting on
-Plugin 'scrooloose/nerdtree'            " directory tree browser
-Plugin 'tpope/vim-sleuth'               " heuristic shiftwidth and tabexpand
-Plugin 'liuchengxu/vim-which-key'       " a realtime helper for the leader key
-Plugin 'w0rp/ale'                       " asynchronous lint engine
-Plugin 'vim-airline/vim-airline'        " status line fun
-Plugin 'vim-airline/vim-airline-themes' " themes for vim-airline
-Plugin 'mattn/emmet-vim'                " html tag helpers
-Plugin 'pseewald/vim-anyfold'           " helpers for folding
-Plugin 'psf/black'                      " python formatter (:BlackUpgrade)
-Plugin 'prettier/vim-prettier'          " run prettier within vim
-Plugin 'leafOfTree/vim-svelte-plugin'   " svelte syntax highlighting
-Plugin 'coc-extensions/coc-svelte'      " the rest of svelte
-Plugin 'airblade/vim-gitgutter'         " gutter shows git changes
-Plugin 'ruanyl/vim-gh-line'             " open current line on github
-Plugin 'google/vim-jsonnet'             " jsonnet
-Plugin 'kyoh86/vim-go-coverage'         " Go code coverage: GoCover GoCoverClear
-Plugin 'davidoc/taskpaper.vim'          " Taskpaper support
+Plugin 'Markdown'                           " markdown support
+Plugin 'fatih/vim-go'                       " golang support (:GoInst... :GoUp...)
+Plugin 'jade.vim'                           " pug (nee jade) html dialact
+Plugin 'posva/vim-vue'                      " vue single-file components
+Plugin 'tpope/vim-fugitive'                 " git stuff
+Plugin 'vim-stylus'                         " stylus (css dialact)
+Plugin 'pangloss/vim-javascript'            " modern javascript
+Plugin 'mxw/vim-jsx'                        " html embedded in javascript
+Plugin 'scrooloose/nerdcommenter'           " comment/uncomment stuff
+Plugin 'RRethy/vim-illuminate'              " highlight the word you're sitting on
+Plugin 'scrooloose/nerdtree'                " directory tree browser
+Plugin 'tpope/vim-sleuth'                   " heuristic shiftwidth and tabexpand
+Plugin 'liuchengxu/vim-which-key'           " a realtime helper for the leader key
+Plugin 'w0rp/ale'                           " asynchronous lint engine
+Plugin 'vim-airline/vim-airline'            " status line fun
+Plugin 'vim-airline/vim-airline-themes'     " themes for vim-airline
+Plugin 'mattn/emmet-vim'                    " html tag helpers
+Plugin 'pseewald/vim-anyfold'               " helpers for folding
+Plugin 'psf/black'                          " python formatter (:BlackUpgrade)
+Plugin 'prettier/vim-prettier'              " run prettier within vim
+Plugin 'airblade/vim-gitgutter'             " gutter shows git changes
+Plugin 'ruanyl/vim-gh-line'                 " open current line on github
+Plugin 'google/vim-jsonnet'                 " jsonnet
+Plugin 'kyoh86/vim-go-coverage'             " Go code coverage: GoCover GoCoverClear
+Plugin 'davidoc/taskpaper.vim'              " Taskpaper support
+
+Plugin 'lisposter/vim-blackboard'           " color scheme
+Plugin 'dracula/vim', { 'name': 'dracula' } " color scheme
+Plugin 'morhetz/gruvbox'                    " gruvbox dark color scheme
+Plugin 'sjl/badwolf'                        " badwolf color scheme
+Plugin 'sainnhe/gruvbox-material'           " gruvbox-material color scheme
+Plugin 'cocopon/iceberg.vim'                " iceberg color scheme
+Plugin 'nordtheme/vim', { 'name': 'nord' }  " nord color scheme
+Plugin 'crusoexia/vim-monokai'              " monokai color theme
+Plugin 'challenger-deep-theme/vim', {'name': 'challenger-deep-theme' } " challenger_deep theme
 
 call vundle#end()
 
@@ -81,8 +87,8 @@ map <leader>gdc :GoDebugContinue<ENTER>
 map <leader>gdp :GoDebugPrint
 
 syntax on
-color blackboard
-set background=dark
+set termguicolors
+color challenger_deep
 set mouse=a
 set ttymouse=sgr
 set scrolloff=3
@@ -93,8 +99,6 @@ set colorcolumn=81
 set list number cursorline
 set listchars=tab:.\ ,trail:~
 set showcmd wildmenu
-highlight ColorColumn ctermbg=Black
-highlight link illuminatedWord Visual
 autocmd FileType make setlocal noexpandtab
 autocmd FileType cpp setlocal noexpandtab
 autocmd FileType go setlocal noexpandtab
