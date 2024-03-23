@@ -143,6 +143,7 @@ alias -g H='| head'
 alias -g T='| tail'
 alias -g P='2>&1 |'
 alias -g S='| sort'
+alias -g C='| cut -c-$COLUMNS'
 alias -g BG='>/dev/null 2>&1 &'
 alias -g LC='| lolcat'
 
