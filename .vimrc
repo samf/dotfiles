@@ -30,6 +30,7 @@ Plugin 'google/vim-jsonnet'                 " jsonnet
 Plugin 'kyoh86/vim-go-coverage'             " Go code coverage: GoCover GoCoverClear
 Plugin 'davidoc/taskpaper.vim'              " Taskpaper support
 
+Plugin 'catppuccin/vim', { 'name': 'catppuccin' }  " catppuccin color schemes
 Plugin 'nordtheme/vim', { 'name': 'nord' }  " nord color scheme
 Plugin 'dracula/vim', { 'name': 'dracula' } " color scheme
 Plugin 'morhetz/gruvbox'                    " gruvbox dark color scheme
@@ -47,8 +48,8 @@ filetype plugin indent on
 let mapleader = ","
 
 runtime colorcycle.vim
-let g:colors = ['challenger_deep', 'blackboard', 'badwolf', 'goodwolf',
-    \'dracula', 'gruvbox', 'gruvbox-material', 'iceberg', 'monokai',
+let g:colors = ['catppuccin_mocha', 'challenger_deep', 'blackboard', 'badwolf',
+    \'goodwolf', 'dracula', 'gruvbox', 'gruvbox-material', 'iceberg', 'monokai',
     \]
 map <leader>CN :exe "colo " .. NextColors()<CR>color<CR>
 map <leader>CP :exe "colo " .. PrevColors()<CR>color<CR>
