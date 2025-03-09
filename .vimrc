@@ -83,6 +83,7 @@ map <leader>nh :nohl<ENTER>
 map <leader>nr :set invrelativenumber<ENTER>
 map <leader>nt :NERDTreeToggle<ENTER>
 map <leader>pb :Black<ENTER>
+map <leader>pp :Prettier<ENTER>
 
 map <leader>gdr :GoDebugStart
 map <leader>gdS :GoDebugStop<ENTER>
@@ -97,7 +98,7 @@ map <leader>gdp :GoDebugPrint
 
 syntax on
 set termguicolors
-color challenger_deep
+color catppuccin_mocha
 set mouse=a
 set ttymouse=sgr
 set scrolloff=3
