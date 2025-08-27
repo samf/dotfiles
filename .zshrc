@@ -42,6 +42,7 @@ prepath=(
     /opt/homebrew/bin
     /opt/homebrew/sbin
     $HOME/.cargo/bin
+    $HOME/.local/bin
 )
 postpath=(
     /usr/misc/bin
