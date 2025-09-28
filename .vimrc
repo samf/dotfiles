@@ -4,7 +4,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'           " VundleUpdate
 
-Plugin 'Markdown'                       " markdown support
+Plugin 'preservim/vim-markdown'         " markdown with front matter support
 Plugin 'fatih/vim-go'                   " golang support (:GoInst... :GoUp...)
 Plugin 'jade.vim'                       " pug (nee jade) html dialact
 Plugin 'posva/vim-vue'                  " vue single-file components
@@ -26,7 +26,6 @@ Plugin 'psf/black'                      " python formatter (:BlackUpgrade)
 Plugin 'prettier/vim-prettier'          " run prettier within vim
 Plugin 'airblade/vim-gitgutter'         " gutter shows git changes
 Plugin 'ruanyl/vim-gh-line'             " open current line on github
-Plugin 'google/vim-jsonnet'             " jsonnet
 Plugin 'kyoh86/vim-go-coverage'         " Go code coverage: GoCover GoCoverClear
 Plugin 'davidoc/taskpaper.vim'          " Taskpaper support
 
@@ -60,6 +59,7 @@ let g:black_linelength = 80
 let g:ale_linters = { 'go': ['golangci-lint'] }
 let g:ale_go_golangci_lint_package = 1
 let g:gh_line_blame_map = '<leader>gB'
+let g:vim_markdown_toml_frontmatter = 1
 
 runtime neural.vim
 runtime claude.vim
