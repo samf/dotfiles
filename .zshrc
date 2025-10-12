@@ -185,6 +185,7 @@ zstyle ':completion:*:descriptions' format '%B%d%b'
 zstyle ':completion:*:messagesâ' format '%d'
 zstyle ':completion:*:warningsâ' format 'No matches for: %d'
 zstyle ':completion:*' group-name ''
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # title bar madness
 
