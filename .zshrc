@@ -136,6 +136,7 @@ alias -s {yml,yaml}=vim
 alias -s taskpaper=vim
 
 alias -g L='2>&1 | less -R'
+alias -g B='2>&1 | bat'
 alias -g G='2>&1 | grep'
 alias -g J='| jq'
 alias -g X='| xargs'
