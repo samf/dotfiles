@@ -56,7 +56,11 @@ map <leader>CC :color<CR>
 
 let g:airline_theme = "deus"
 let g:black_linelength = 80
-let g:ale_linters = { 'go': ['golangci-lint'] }
+" Only use tsserver and eslint for TypeScript (not deno)
+let g:ale_linters = {
+\   'typescript': ['tsserver', 'eslint'],
+\   'go': ['golangci-lint']
+\}
 let g:ale_go_golangci_lint_package = 1
 let g:gh_line_blame_map = '<leader>gB'
 let g:vim_markdown_toml_frontmatter = 1
