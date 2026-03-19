@@ -29,30 +29,15 @@ Plugin 'ruanyl/vim-gh-line'             " open current line on github
 Plugin 'kyoh86/vim-go-coverage'         " Go code coverage: GoCover GoCoverClear
 Plugin 'davidoc/taskpaper.vim'          " Taskpaper support
 
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}  " Typescript support + more?
+
 Plugin 'catppuccin/vim', { 'name': 'catppuccin' }  " catppuccin color schemes
-Plugin 'nordtheme/vim', { 'name': 'nord' }  " nord color scheme
-Plugin 'dracula/vim', { 'name': 'dracula' } " color scheme
-Plugin 'morhetz/gruvbox'                    " gruvbox dark color scheme
-Plugin 'sainnhe/gruvbox-material'           " gruvbox-material color scheme
-Plugin 'cocopon/iceberg.vim'                " iceberg color scheme
-Plugin 'crusoexia/vim-monokai'              " monokai color theme
-Plugin 'lisposter/vim-blackboard'           " color scheme
-Plugin 'sjl/badwolf'                        " badwolf color scheme
-Plugin 'challenger-deep-theme/vim', {'name': 'challenger-deep-theme' } " challenger_deep theme
 
 call vundle#end()
 
 filetype plugin indent on
 
 let mapleader = ","
-
-runtime colorcycle.vim
-let g:colors = ['catppuccin_mocha', 'challenger_deep', 'blackboard', 'badwolf',
-    \'goodwolf', 'dracula', 'gruvbox', 'gruvbox-material', 'iceberg', 'monokai',
-    \]
-map <leader>CN :exe "colo " .. NextColors()<CR>color<CR>
-map <leader>CP :exe "colo " .. PrevColors()<CR>color<CR>
-map <leader>CC :color<CR>
 
 let g:airline_theme = "deus"
 let g:black_linelength = 80
@@ -71,6 +56,18 @@ runtime claude.vim
 set hidden incsearch hlsearch ignorecase smartcase
 nnoremap <silent> <CR> :nohl<CR><CR>
 nnoremap <silent> <leader> :WhichKey ','<CR>
+
+" coc.nvim stuff from https://github.com/neoclide/coc.nvim
+set encoding=utf-8
+set nobackup
+set nowritebackup
+set updatetime=300
+nmap <silent><nowait> <C-]> <Plug>(coc-definition)
+nmap <silent><nowait> gd <Plug>(coc-definition)
+nmap <silent><nowait> gy <Plug>(coc-type-definition)
+nmap <silent><nowait> gi <Plug>(coc-implementation)
+nmap <silent><nowait> gr <Plug>(coc-references)
+nnoremap <C-t> <C-o>
 
 imap <C-C> <Esc>
 imap <C-Y> <Esc><C-Y>,i
@@ -106,6 +103,8 @@ map <leader>gdp :GoDebugPrint
 syntax on
 set termguicolors
 color catppuccin_mocha
+highlight Comment guifg=#89dceb
+
 set mouse=a
 set ttymouse=sgr
 set scrolloff=3
