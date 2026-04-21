@@ -7,3 +7,5 @@ test -z "$n" && n=16
 local -a mru=( ${(f)"$(dirs -lp | grep -v "^$PWD$" | head -${n})"} )
 
 dirs $mru
+
+dirs -pv
