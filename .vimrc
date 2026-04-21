@@ -57,18 +57,9 @@ set hidden incsearch hlsearch ignorecase smartcase
 nnoremap <silent> <CR> :nohl<CR><CR>
 nnoremap <silent> <leader> :WhichKey ','<CR>
 
-" coc.nvim stuff from https://github.com/neoclide/coc.nvim
-set encoding=utf-8
-set nobackup
-set nowritebackup
-set updatetime=300
-nmap <silent><nowait> <C-]> <Plug>(coc-definition)
-nmap <silent><nowait> gd <Plug>(coc-definition)
-nmap <silent><nowait> gy <Plug>(coc-type-definition)
-nmap <silent><nowait> gi <Plug>(coc-implementation)
-nmap <silent><nowait> gr <Plug>(coc-references)
-nnoremap <C-t> <C-o>
+runtime coc.vim
 
+" escape for escape-less keyboards
 imap <C-C> <Esc>
 imap <C-Y> <Esc><C-Y>,i
 
