@@ -157,9 +157,9 @@ alias -g LC='| lolcat'
 
 # handy variables
 
-phx=ssh.phx.nearlyfreespeech.net
 marshall='/Users/samf/Library/Mobile Documents/com~apple~CloudDocs/Marshall fire'
 json='application/json'
+ideas='/Users/samf/Desktop/vaults/ideas'
 
 # functions
 
