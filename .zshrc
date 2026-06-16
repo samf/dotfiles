@@ -130,12 +130,6 @@ alias crp='npx cypress open --env baseUrl=https://efmrl.com/efmrl-api/,sBaseUrl=
 if (( ! $+commands[reset] )); then
     alias reset='echo -e "\033c"'
 fi
-if (( $+commands[g] )); then
-    alias lf='g -F'
-    alias lfa='g -a'
-    alias lfs='g --size'
-    alias ll='g -l -i --size -a'
-fi
 
 alias -s go=vim
 alias -s {yml,yaml}=vim
